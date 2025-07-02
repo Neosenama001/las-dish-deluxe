@@ -1,0 +1,283 @@
+body {
+  background-color: #2e2e2e;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo {
+  width: 70px;
+  height: auto;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-search {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-search input {
+  max-width: 300px;
+  width: 90%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #444;
+  color: white;
+  font-size: 16px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #f0a500;
+}
+
+/* Cart Section */
+.cart-grid {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 15px;
+  background: #444;
+  padding: 15px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: absolute;
+  top: 40px; /* Adjust based on navbar height */
+  right: 50px;
+  width: 100px;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.sidebar-show {
+  transform: scaleY(1);
+}
+
+.sidebar .close-btn {
+  display:contents; /* Hidden since we are clicking outside or toggling */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+  color: #f0a500;
+}
+.hamburger.hide {
+  display: none;
+}
+
+.cart-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cart-item div {
+  flex-grow: 1;
+}
+
+.cart-item button {
+  background: #f0a500;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  color: #222;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cart-total {
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: right;
+  border-top: 1px solid #666;
+  margin: 0 20px;
+}
+
+.checkout-section {
+  text-align: right;
+  padding: 0 20px 40px;
+}
+
+.checkout-section button {
+  padding: 10px 20px;
+  background-color: #f0a500;
+  color: #1f1f1f;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.footer-logo {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .nav-logo {
+    width: 40px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .checkout-section,
+  .cart-total {
+    text-align: center;
+  }
+
+  .footer,
+  .footer-logo,
+  .footer-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+    .sidebar {
+    width: 100%;
+    right: 0;
+    width:30%;
+  }
+  
+}
+

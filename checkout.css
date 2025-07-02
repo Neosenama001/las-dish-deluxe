@@ -1,0 +1,27 @@
+.checkout-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.checkout-container h2 {
+  text-align: center;
+}
+
+.checkout-container label {
+  font-weight: bold;
+}
+
+.checkout-container button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #f0a500;
+  border: none;
+  color: #1f1f1f;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}

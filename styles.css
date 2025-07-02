@@ -1,0 +1,487 @@
+body {
+  background-color: #1f1f1f;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo {
+  width: 70px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #f0a500;
+}
+
+#food-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
+}
+
+.row-1 {
+  align-items: stretch;
+}
+
+.row-1 .vertical-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.row-1 .vertical-stack .food-card {
+  width: 420px;
+  height: auto;
+}
+
+.large-card {
+  padding: 0;
+  max-width: 800px;
+  flex-grow: 1;
+}
+
+.large-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.row-2 {
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.row-2 .food-card {
+  width: 23%;
+  min-width: 220px;
+}
+
+.row-3 {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.row-3 .food-card {
+  width: 420px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.row-3 .food-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* New Block: Heading + Paragraph next to card in Row 3 */
+.info-text-block {
+  max-width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.info-text-block h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #f0a500;
+  text-align: center;
+}
+
+.info-text-block p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #ddd;
+  justify-content: center;
+}
+
+.row-4 {
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.row-4 .food-card {
+  width: 380px;
+}
+
+.food-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  color: white;
+  background: #444;
+  padding: 0;
+} 
+
+.food-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-text button {
+  background-color: #ff000065;
+  color: #1f1f1f;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  width: fit-content;
+  transition: background 0.3s;
+}
+
+.overlay-text button:hover {
+  background-color: #ffaa00;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.226);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+}
+
+/* MODAL STYLES */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #2e2e2e;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  animation: zoomIn 0.3s ease;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content button:first-of-type {
+  background-color: #f0a500;
+  color: #1f1f1f;
+}
+
+.modal-content button:last-of-type {
+  background-color: #555;
+  color: white;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.footer-logo {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add after your existing CSS or in the right place */
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: absolute;
+  top: 40px; /* Adjust based on navbar height */
+  right: 50px;
+  width: 100px;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.sidebar-show {
+  transform: scaleY(1);
+}
+
+.sidebar .close-btn {
+  display:contents; /* Hidden since we are clicking outside or toggling */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+  color: #f0a500;
+}
+.hamburger.hide {
+  display: none;
+}
+
+@media (max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+
+/* Responsive nav toggle */
+@media screen and (max-width: 800px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo {
+    width: 40px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .row-1 .vertical-stack,
+  .row-3,
+  .row-4 {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .row-1 .vertical-stack,
+  .row-1 .vertical-stack .food-card,
+  .large-card,
+  .row-3 .food-card,
+  .row-3 .info-text-block,
+  .row-2 .food-card,
+  .row-4 .food-card {
+    width: 100%;
+    max-width: 100%;
+  }
+.food-card,
+  .large-card{
+    height: 50%;
+    max-width: 100%;
+  }
+  .food-card {
+    max-width: 100%;
+  }
+
+
+  .overlay-text {
+    left: 5px;
+    right: 5px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .overlay-text button {
+    width: auto;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .info-text-block {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .footer,
+  .footer-logo,
+  .footer-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  .sidebar {
+    width: 100%;
+    right: 0;
+    width:30%;
+  }
+  
+}
+
+
+

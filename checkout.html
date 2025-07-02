@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><img src="images/logo.png" alt="Logo" /></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="checkout-container">
+    <h2>Checkout</h2>
+    <form id="checkoutForm">
+      <label>Choose Delivery Option:</label><br>
+      <input type="radio" name="deliveryOption" value="Delivery" required> Delivery
+      <input type="radio" name="deliveryOption" value="Collection" required> Collection
+      <br><br>
+
+      <label>Total:</label>
+      <div id="checkoutTotal">Calculating...</div>
+      <br>
+      
+      <button type="submit">Place Order</button>
+    </form>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

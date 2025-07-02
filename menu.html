@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu</title>
+  <link rel="stylesheet" href="menu.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="logo-removebg-preview.png" alt="Logo" />
+        <h2>Las'Dish Deluxe</h2>
+      </div>
+
+
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="cart.html">Cart (<span id="cart-count-sidebar">0</span>)</a></li>
+    </ul>
+  </div>
+
+  <main class="menu-container">
+    <h2>Our Menu</h2>
+    <div id="menu-items" class="menu-grid"></div>
+
+    <div class="center-section">
+      <h3>Chef's Specials</h3>
+      <p>We bring you a mix of flavor, culture, and delight straight from our kitchen.</p>
+    </div>
+
+    <div id="specials-row" class="triple-row"></div>
+
+    <div class="popup-gallery">
+      <img src="4.jpeg" alt="Popup 1" class="popup fade-in-element" />
+      <img src="5.jpeg" alt="Popup 2" class="popup fade-in-element" />
+    </div>
+  </main>
+
+  <div id="food-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modal-img" src="" alt="Food Item" />
+      <h3 id="modal-name"></h3>
+      <p id="modal-desc"></p>
+      <p><strong>R<span id="modal-price"></span></strong></p>
+      <div class="qty-controls">
+        <button id="decrease">–</button>
+        <span id="quantity">1</span>
+        <button id="increase">+</button>
+      </div>
+      <button id="add-to-cart-modal">Add to Cart</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Las'Dish Deluxe. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100063790772395/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/las_dishdeluxe/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:lasdishdeluxe@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/27812629639"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://x.com/las_dishdeluxe/"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.google.com/maps/place/58+Modisakeng+St,+Atteridgeville,+Pretoria,+0006"><i class="fa-solid fa-location-dot"></i></a>
+        <a href="tel:+27670629743"><i class="fa-solid fa-phone"></i></a>
+      </div>
+      <div class="footer-logo">
+        <img src="logo-removebg-preview.png" alt="Las'Dish Deluxe Logo" />
+      </div>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>
